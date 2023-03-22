@@ -52,7 +52,7 @@ SELECT CONCAT('employee', LPAD(@user_num := @user_num + 1, 4, '0'), ''), -- 生�
 FROM information_schema.tables
 WHERE @user_num < 90; -- 新增90筆資料
 -- 新增90筆資料
-INSERT INTO salary_test (employee_id, salary, insurance)
+INSERT INTO salary (employee_id, salary, insurance)
 SELECT id, 
        ROUND(RAND() * 10000 + 30000, 2), 
        FLOOR(RAND() * 2)
